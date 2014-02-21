@@ -1,0 +1,10 @@
+a {
+	@include transition(color 200ms linear);
+}
+
+.wrapper {
+	//width: 100%;
+	width: 960px;
+	max-width: 960px;
+	margin: 0 auto;
+}

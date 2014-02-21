@@ -10,11 +10,11 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: 'assets/scripts/',
 						src: ['**/*.js','!**/_plugins/*.js','!**/*.min.js'],
-						dest: 'markup/js/min/',
-						ext: '.min.js'
+						dest: 'markup/scripts/',
+						ext: '.js'
 					},
 					{
-						'markup/js/plugins-comb.min.js' : ['assets/scripts/_plugins/*.js']
+						'markup/scripts/plugins.js' : ['assets/scripts/_plugins/*.js']
 					}
 				]
 			}
@@ -36,7 +36,7 @@ module.exports = function(grunt) {
 					{
 						expand: true,
 						src: ['assets/scripts/**/modernizr*.js'],
-						dest: ['markup/js']
+						dest: ['markup/scripts']
 					}
 				]
 			}
@@ -44,15 +44,15 @@ module.exports = function(grunt) {
 		compass: {
 			dist: {
 				options: {
-					sassDir: 'assets/scss'
-					cssDir: 'markup/css'
+					sassDir: 'assets/scss',
+					cssDir: 'markup/css',
 					outputStyle: 'compact'
 				}
 			},
 			release: {
 				options: {
-					sassDir: 'assets/scss'
-					cssDir: 'markup/css'
+					sassDir: 'assets/scss',
+					cssDir: 'markup/css',
 					outputStyle: 'compressed'
 				}
 			}
@@ -60,7 +60,7 @@ module.exports = function(grunt) {
 		concat: {
 			appjs: {
 				src: 'assets/scripts/functions/*.js',
-				dest: 'markup/js/app.js'
+				dest: 'markup/scripts/app.js'
 
 			}
 		},
@@ -92,6 +92,15 @@ module.exports = function(grunt) {
 				]
 			}
 		},
+		connect: {
+			server: {
+				options: {
+					port: 8080,
+					hostname: 'localhost',
+					base: 'markup'
+				}
+			}
+		},
 		watch: {
 			compass: {
 				files: ['assets/scss/**/*.scss'],
@@ -121,8 +130,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-bake');
 
-	grunt.registerTask('default', ['watch']);
+	grunt.registerTask('default', ['connect','watch']);
 	grunt.registerTask('release', ['uglify']);
 };
