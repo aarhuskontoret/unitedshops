@@ -1,3 +1,16 @@
+// sticky footer 
+html, body, .wrap-all, .wrap-all-inner { height: 100%; }
+.footer-push { min-height: 100%; }
+.main {
+	overflow: auto;
+	padding-bottom: 130px;
+}
+
+body {
+	background-color: #f1f1f1;
+	@include background-image(linear-gradient(left,#d9d9d9,#f4f4f4,#d9d9d9));
+}
+
 a {
 	@include transition(color 200ms linear);
 }
@@ -7,4 +20,16 @@ a {
 	width: 960px;
 	max-width: 960px;
 	margin: 0 auto;
+}
+
+.body-text {
+	width: 670px;
+}
+
+.main {
+	@include background-image(linear-gradient(rgba(0,0,0,0.15) 0, rgba(0,0,0,0) 15px));
+
+	> .wrapper {
+		padding: 175px 0 50px 0;
+	}
 }
