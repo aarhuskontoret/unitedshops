@@ -12,6 +12,7 @@
 
 }
 
+$hovercolor: #bb3227;
 $bodytext : Tahoma, Helvetica, sans-serif;
 $headertext: 'Folio Bold Condensed';
 
@@ -22,9 +23,7 @@ body {
 	color: #666;
 }
 
-h1, h2, h3, h4 {
-	font-family: $headertext;
-}
+h1, h2, h3 { font-family: $headertext; }
 h1, h2, h3 { color: #000; }
 h1, h2 {
 	text-transform: uppercase;
@@ -32,6 +31,13 @@ h1, h2 {
 
 h1 { font-size: 34px; margin-bottom: 1em; }
 h2 { font-size: 18px; margin-bottom: 0.3em; }
-h3 { font-size: 14px; margin-bottom: 0.3em; }
+h3 { font-size: 16px; margin-bottom: 0.3em; }
+h4 { font-size: 14px; margin-bottom: 0.3em; font-weight: bold; }
 
 p { margin-bottom: 1.3em; }
+
+a { color: $hovercolor; }
+a:hover,
+a:focus {
+	color: #000;
+}

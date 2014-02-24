@@ -1,0 +1,32 @@
+.flexslider {
+	position: relative;
+
+	.flex-viewport { border-radius: 5px; }
+
+	.flex-direction-nav {
+		a {
+			position: absolute;
+			top: 50%;
+			margin-top: -12px;
+
+			width: 24px;
+			height: 57px;
+
+			background: url('/img/sprite.png') -40px -270px no-repeat;
+			opacity: 0.3;
+
+			text-indent: -999em;
+			overflow: hidden;
+
+			@include transition(opacity 200ms linear);
+
+			&.flex-prev { left: 0; }
+			&.flex-next { right: 0; background-position: -65px -270px; }
+		}
+	}
+
+	&:hover {
+		.flex-direction-nav a { opacity: 0.6; }
+		.flex-direction-nav a:hover { opacity: 1; }
+	}
+}

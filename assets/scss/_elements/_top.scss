@@ -6,7 +6,7 @@
 		position: absolute;
 		display: block;
 		width: 305px;
-		height: 256px;
+		height: 270px;
 		margin: 0 -60px;
 
 		overflow: hidden;
@@ -49,8 +49,18 @@
 				}
 			}
 
-			&.active a {
-				color: #fff;
+			&.active {
+				&:before {
+					content: "";
+					background: url('/img/sprite.png') -90px -270px no-repeat;
+					width: 20px; height: 20px;
+
+					position: absolute;
+					left: 50%; top: 8px;
+					margin-left: -10px;
+
+				}
+				a { color: #fff; }
 			}
 
 			&:after {
@@ -61,7 +71,7 @@
 				background: url('/img/sprite.png') 0 -271px no-repeat; 
 
 				position: absolute;
-				right: -50px;
+				right: -55px;
 				top: 0;
 			}
 

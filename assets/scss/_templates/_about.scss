@@ -1,0 +1,13 @@
+.about {
+	
+	.main > .wrapper { overflow: hidden; }
+	.col {
+		width: 50%;
+		float: left;
+
+		&:nth-child(even) { padding-right: 20px; }
+		&:nth-child(odd) { padding-left: 20px; }
+
+		form { float: left; width: 100%; }
+	}
+}

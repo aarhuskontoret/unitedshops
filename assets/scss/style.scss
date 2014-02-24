@@ -10,7 +10,15 @@
 @import "_elements/_top-nav.scss";
 @import "_elements/_top.scss";
 @import "_elements/_footer.scss";
+@import "_elements/_slider.scss";
+@import "_elements/_form.scss";
 
 /* TEMPLATE STYLES */
+@import "_templates/_forside.scss";
+@import "_templates/_events.scss";
+@import "_templates/_about.scss";
+@import "_templates/_shops.scss";
 
 /* VENDOR STYLES */
+@import "_vendors/_flexslider.scss";
+@import "_vendors/_uniform.scss";

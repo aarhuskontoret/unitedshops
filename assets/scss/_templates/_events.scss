@@ -1,0 +1,70 @@
+.events {
+
+	.event-search {
+		background: $hovercolor;
+		padding: 20px;
+		margin-bottom: 20px;
+
+		.selector {
+			margin-right: 20px;
+		}
+	}
+	
+	.event-results {
+		.event {
+			background: #dedede;
+			border-radius: 5px;
+			width: 100%;
+			position: relative;
+			margin-bottom: 20px;
+
+			@include transition(box-shadow 200ms linear);
+
+			a {
+				display: block;
+				padding: 20px;
+				text-decoration: none;
+				color: #666;
+				width: 100%;
+			}
+
+			.date,
+			h3 {
+				font-family: $headertext;
+				font-size: 22px;
+				display: inline-block;
+				text-transform: uppercase;
+				margin-bottom: 15px;
+
+				@include transition(color 200ms linear);
+			}
+
+			.date { width: 85px; }
+			p { margin-bottom: 0; width: 720px; }
+
+
+			&:hover {
+				box-shadow: 0 0 10px rgba(0,0,0,0.15),
+							0 0 3px rgba(0,0,0,0.2);
+				h3 { color: $hovercolor; }
+			}
+
+
+			&:after {
+				content: "";
+				width: 129px; height: 100px;
+
+				position: absolute;
+				top: -5px; right: 40px;
+
+				background: url('/img/shops-sprite.png') 0 0 no-repeat;
+			}
+
+			&.shop-01:after { background-position: 0 -100px; }
+			&.shop-02:after { background-position: 0 -200px; }
+			&.shop-03:after { background-position: 0 -300px; }
+			&.shop-04:after { background-position: 0 -400px; }
+			&.shop-05:after { background-position: 0 -500px; }
+		}
+	}
+}

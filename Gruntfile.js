@@ -7,11 +7,7 @@ module.exports = function(grunt) {
 			release: {
 				files: [
 					{
-						expand: true,
-						cwd: 'assets/scripts/',
-						src: ['**/*.js','!**/_plugins/*.js','!**/*.min.js'],
-						dest: 'markup/scripts/',
-						ext: '.js'
+						'markup/scripts/app.js' : ['assets/scripts/_functions/*.js']
 					},
 					{
 						'markup/scripts/plugins.js' : ['assets/scripts/_plugins/*.js']
@@ -59,7 +55,7 @@ module.exports = function(grunt) {
 		},
 		concat: {
 			appjs: {
-				src: 'assets/scripts/functions/*.js',
+				src: 'assets/scripts/_functions/*.js',
 				dest: 'markup/scripts/app.js'
 
 			}

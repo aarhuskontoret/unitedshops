@@ -1,0 +1,20 @@
+.forside {
+	.front-slider { margin-bottom: 20px; }
+	.front-spots {
+		overflow: hidden;
+		
+		.spot {
+			width: 310px;
+			margin-right: 15px;
+			float: left;
+			border-radius: 5px;
+			overflow: hidden;
+
+			img { display: block; }
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+}

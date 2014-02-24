@@ -1,0 +1,48 @@
+<!--(bake _partials/_head.htm title="Butikker" templateclass="shops")-->
+<!--(bake _partials/_header-and-nav.htm)-->
+
+<div class="main" id="main">
+	
+	<div class="wrapper">
+		
+		<h1>Butikker</h1>
+		<p class="manchet">
+			Her finder ud at kort over alle vore butikker Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sem lectus, accumsan in lorem in, pharetra viverra metus. 
+		</p>
+
+		<div class="google-maps-canvas" id="map-canvas">
+
+		</div>
+
+		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	    <script type="text/javascript">
+	      function initialize() {
+	      	var mapStyles = [{
+			    "stylers": [
+			      { "saturation": -100 }
+			    ]
+			  },{
+			    "featureType": "poi",
+			    "stylers": [
+			      { "visibility": "off" }
+			    ]
+			}];
+	        var mapOptions = {
+	          center: new google.maps.LatLng(54.794834,9.373137),
+	          zoom: 16,
+	          styles: mapStyles
+	        };
+
+	        var map = new google.maps.Map(document.getElementById("map-canvas"),
+	            mapOptions);
+	      }
+	      google.maps.event.addDomListener(window, 'load', initialize);
+	    </script>
+	</div>
+
+</div> <!-- end #main -->
+
+</div> <!-- end .footer-push -->
+
+<!--(bake _partials/_footer.htm)-->
+<!--(bake _partials/_bottom.htm)-->
