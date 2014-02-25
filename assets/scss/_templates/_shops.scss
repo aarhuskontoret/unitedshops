@@ -1,7 +1,57 @@
 .shops {
+	.main > .wrapper { overflow: hidden; }
 	.google-maps-canvas {
+		float: left;
 		width: 660px;
 		height: 510px;
 		border: 1px solid #ccc;
+
+		.ggl-maps-info {
+			font-size: 12px;
+			line-height: 1.3em;
+
+			.links {
+				margin-top: 12px;
+				border-top: 1px solid #ccc;
+				padding: 5px 0;
+			}
+		}
+	}
+
+	.shops-list {
+		width: 265px;
+		float: right;
+		ul { list-style: none; padding: 0 0 0 40px; counter-reset: list;}
+		li {
+			position: relative;
+			margin-bottom: 15px;
+
+			a { color: #666; &:hover { color: $hovercolor;} }
+			&.active a { font-weight: bold; color: $hovercolor; }
+
+			&:before {
+				counter-increment: list;
+				content: counter(list);
+
+				position: absolute;
+				top: -11px;
+				left: -38px;
+				
+				width: 36px; height: 36px;
+				background: url('/img/sprite.png') -146px -270px;
+
+				text-align: center;
+				color: #fff;
+				line-height: 37px;
+				font-weight: bold;
+				font-size: 12px;
+
+				@include transform(scale(0.75));
+			}
+
+			&.active:before {
+				@include transform(scale(1));
+			}
+		}
 	}
 }

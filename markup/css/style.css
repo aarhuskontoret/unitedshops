@@ -249,7 +249,7 @@ a { -webkit-transition: color 200ms linear; -moz-transition: color 200ms linear;
 /* line 29, ../../assets/scss/_basefiles/_common.scss */
 .main { background-image: -webkit-gradient(linear, 50% 0%, 50% 15, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: -o-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); }
 /* line 32, ../../assets/scss/_basefiles/_common.scss */
-.main > .wrapper { padding: 175px 0 50px 0; }
+.main > .wrapper { padding: 155px 0 50px 0; }
 
 /* ELEMENT STYLES */
 /* line 1, ../../assets/scss/_elements/_top-nav.scss */
@@ -295,7 +295,19 @@ a { -webkit-transition: color 200ms linear; -moz-transition: color 200ms linear;
 .top .main-nav li:last-child:after { content: none; display: none; }
 
 /* line 1, ../../assets/scss/_elements/_footer.scss */
-.super-footer { position: relative; height: 130px; margin-top: -130px; background: #c1c1c1 url("/img/footer-background.png") center top no-repeat; }
+.super-footer { position: relative; height: 130px; padding: 20px 0; margin-top: -130px; background: #c1c1c1 url("/img/footer-background.png") center top no-repeat; }
+/* line 10, ../../assets/scss/_elements/_footer.scss */
+.super-footer .shops ul { width: 100%; text-align: justify; }
+/* line 11, ../../assets/scss/_elements/_footer.scss */
+.super-footer .shops ul:after { content: ""; display: inline-block; clear: both; width: 100%; height: 1px; }
+/* line 19, ../../assets/scss/_elements/_footer.scss */
+.super-footer .shops li { display: inline-block; vertical-align: middle; }
+/* line 23, ../../assets/scss/_elements/_footer.scss */
+.super-footer .shops li a { -webkit-filter: grayscale(1) brightness(0.8); -webkit-transition: -webkit-filter 200ms linear; -moz-transition: -webkit-filter 200ms linear; -o-transition: -webkit-filter 200ms linear; transition: -webkit-filter 200ms linear; }
+/* line 28, ../../assets/scss/_elements/_footer.scss */
+.super-footer .shops li a:hover { -webkit-filter: grayscale(0) brightness(1); }
+/* line 33, ../../assets/scss/_elements/_footer.scss */
+.super-footer .shops li img { max-width: 210px; max-height: 80px; height: auto; width: auto; }
 
 /* line 1, ../../assets/scss/_elements/_slider.scss */
 .flexslider { position: relative; }
@@ -389,7 +401,29 @@ input[type="button"]:hover, input[type="button"]:focus, input[type="submit"]:hov
 .about .col form { float: left; width: 100%; }
 
 /* line 2, ../../assets/scss/_templates/_shops.scss */
-.shops .google-maps-canvas { width: 660px; height: 510px; border: 1px solid #ccc; }
+.shops .main > .wrapper { overflow: hidden; }
+/* line 3, ../../assets/scss/_templates/_shops.scss */
+.shops .google-maps-canvas { float: left; width: 660px; height: 510px; border: 1px solid #ccc; }
+/* line 9, ../../assets/scss/_templates/_shops.scss */
+.shops .google-maps-canvas .ggl-maps-info { font-size: 12px; line-height: 1.3em; }
+/* line 13, ../../assets/scss/_templates/_shops.scss */
+.shops .google-maps-canvas .ggl-maps-info .links { margin-top: 12px; border-top: 1px solid #ccc; padding: 5px 0; }
+/* line 21, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list { width: 265px; float: right; }
+/* line 24, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list ul { list-style: none; padding: 0 0 0 40px; counter-reset: list; }
+/* line 25, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list li { position: relative; margin-bottom: 15px; }
+/* line 29, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list li a { color: #666; }
+/* line 29, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list li a:hover { color: #bb3227; }
+/* line 30, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list li.active a { font-weight: bold; color: #bb3227; }
+/* line 32, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list li:before { counter-increment: list; content: counter(list); position: absolute; top: -11px; left: -38px; width: 36px; height: 36px; background: url("/img/sprite.png") -146px -270px; text-align: center; color: #fff; line-height: 37px; font-weight: bold; font-size: 12px; -webkit-transform: scale(0.75); -moz-transform: scale(0.75); -ms-transform: scale(0.75); -o-transform: scale(0.75); transform: scale(0.75); }
+/* line 52, ../../assets/scss/_templates/_shops.scss */
+.shops .shops-list li.active:before { -webkit-transform: scale(1); -moz-transform: scale(1); -ms-transform: scale(1); -o-transform: scale(1); transform: scale(1); }
 
 /* VENDOR STYLES */
 /* jQuery FlexSlider v2.2.0 http://www.woothemes.com/flexslider/  Copyright 2012 WooThemes Free to use under the GPLv2 license. http://www.gnu.org/licenses/gpl-2.0.html  Contributing author: Tyler Smith (@mbmufffin) */

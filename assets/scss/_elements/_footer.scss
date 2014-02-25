@@ -1,6 +1,41 @@
 .super-footer {
 	position: relative;
 	height: 130px;
+	padding: 20px 0;
 	margin-top: -130px;
 	background: #c1c1c1 url('/img/footer-background.png') center top no-repeat;
+
+	.shops {
+
+		ul { width: 100%; text-align: justify; 
+			&:after {
+				content: "";
+				display: inline-block;
+				clear:both;
+				width: 100%;
+				height: 1px;
+			}
+		}
+		li {
+			display: inline-block;
+			vertical-align: middle;
+
+			a {
+				-webkit-filter: grayscale(1) brightness(0.8);
+
+				@include transition(-webkit-filter 200ms linear);
+
+				&:hover {
+					-webkit-filter: grayscale(0) brightness(1);
+				}
+			}
+
+			img {
+				max-width: 210px;
+				max-height: 80px;
+				height: auto;
+				width: auto;
+			}
+		}
+	}
 }

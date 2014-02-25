@@ -12,7 +12,7 @@
 		<link rel="apple-touch-icon" sizes="512x512" href="/img/touch-icon-512.png">
 		<link rel="shortcut icon" href="/img/favicon.ico">
 
-		<script type="text/javascript" src="/scripts/modernizr.custom.js"></script>
+		<script type="text/javascript" src="/scripts/modernizr.js"></script>
 
 		<link rel="stylesheet" href="/css/style.css" type="text/css" media="all">
 	</head>
@@ -75,6 +75,10 @@
 
 		</div>
 
+		<div class="shops-list" id="shops">
+
+		</div>
+
 		<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 	    <script type="text/javascript">
 	      function initialize() {
@@ -96,6 +100,8 @@
 
 	        var map = new google.maps.Map(document.getElementById("map-canvas"),
 	            mapOptions);
+
+	        base.placeMarkers(map);
 	      }
 	      google.maps.event.addDomListener(window, 'load', initialize);
 	    </script>
@@ -110,11 +116,11 @@
 	<div class="wrapper">
 		<nav class="shops">
 			<ul>
-				<li class="ottoduborg"><a href="#">Otto Duborg</a></li>
-				<li class="poetzsch"><a href="#">Poetzch Padborg</a></li>
-				<li class="byggecenter"><a href="#">Otto Duborg Byggecenter</a></li>
-				<li class="toys"><a href="#">Otto Duborg Toys</a></li>
-				<li class="mcd"><a href="#">McDonald's</a></li>
+				<li><a href="#"><img src="/img/footer/ottoduborg.png" alt="Otto Duborg" /></a></li>
+				<li><a href="#"><img src="/img/footer/poetzch.png" alt="Poetzch Padborg" /></a></li>
+				<li><a href="#"><img src="/img/footer/byggecenter.png" alt="Otto Duborg Byggecenter" /></a></li>
+				<li><a href="#"><img src="/img/footer/toys.png" alt="Otto Duborg Toys" /></a></li>
+				<li><a href="#"><img src="/img/footer/mcd.png" alt="McDonald's" /></a></li>
 			</ul>
 		</nav>
 	</div>

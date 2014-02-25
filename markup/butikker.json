@@ -1,0 +1,65 @@
+[{
+    "name":"Otto Duborg",
+    "logo":"http://placehold.it/150x45",
+    "adress": [
+        "Industrieweg 49",
+        "24955 Harrislee",
+        "Tyskland"
+    ],
+    "open" : {
+        "Mandag - Lørdag" : "7:00 - 21:00",
+        "Fredag" : "7:00 - 22:00",
+        "Søndag og tyske helligdage" : "11:00 - 20:00"
+    },
+    "latlng" : [
+        "54.794834",
+        "9.373137"
+    ]
+},{
+    "name":"Poetzch Padborg",
+    "logo":"http://placehold.it/150x45",
+    "adress": [
+        "Industrieweg 49",
+        "24955 Harrislee",
+        "Tyskland"
+    ],
+    "open" : {
+        "Mandag - Lørdag" : "7:00 - 22:00",
+        "Søndag og tyske helligdage" : "11:00 - 22:00"
+    },
+    "latlng" : [
+        "54.794919",
+        "9.372620"
+    ]
+},{
+    "name":"Otto Duborg Byggecenter",
+    "logo":"http://placehold.it/150x45",
+    "adress": [
+        "Industrieweg 49",
+        "24955 Harrislee",
+        "Tyskland"
+    ],
+    "open" : {
+        "Mandag - Lørdag" : "08:00 - 20:00"
+    },
+    "latlng" : [
+        "54.793688",
+        "9.374465"
+    ]
+},{
+    "name":"Otto Duborg Toys",
+    "logo":"http://placehold.it/150x45",
+    "adress": [
+        "Industrieweg 49",
+        "24955 Harrislee",
+        "Tyskland"
+    ],
+    "open" : {
+        "Mandag - Lørdag" : "08:00 - 19:00",
+        "Søn- og helligdage" : "11:00 - 20:00"
+    },
+    "latlng" : [
+        "54.793705",
+        "9.372900"
+    ]
+}]
