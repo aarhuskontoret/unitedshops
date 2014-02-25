@@ -245,10 +245,12 @@ a { -webkit-transition: color 200ms linear; -moz-transition: color 200ms linear;
 
 /* line 25, ../../assets/scss/_basefiles/_common.scss */
 .body-text { width: 670px; }
+/* line 28, ../../assets/scss/_basefiles/_common.scss */
+.body-text ul { padding: 0 0 0 2em; }
 
-/* line 29, ../../assets/scss/_basefiles/_common.scss */
+/* line 33, ../../assets/scss/_basefiles/_common.scss */
 .main { background-image: -webkit-gradient(linear, 50% 0%, 50% 15, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: -o-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); }
-/* line 32, ../../assets/scss/_basefiles/_common.scss */
+/* line 36, ../../assets/scss/_basefiles/_common.scss */
 .main > .wrapper { padding: 155px 0 50px 0; }
 
 /* ELEMENT STYLES */
