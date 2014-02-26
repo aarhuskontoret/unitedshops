@@ -2,6 +2,8 @@
 	height: 136px;
 	background: url('/img/top-background.png') center top;
 
+	.wrapper { position: relative; }
+
 	.logo {
 		position: absolute;
 		display: block;
@@ -13,6 +15,12 @@
 		text-indent: -999em;
 
 		background: url('/img/sprite.png') 0 0 no-repeat;
+	}
+
+	.header-text {
+		position: absolute;
+		left: 220px;
+		top: 180px;
 	}
 
 	.main-nav {

@@ -247,10 +247,14 @@ a { -webkit-transition: color 200ms linear; -moz-transition: color 200ms linear;
 .body-text { width: 670px; }
 /* line 28, ../../assets/scss/_basefiles/_common.scss */
 .body-text ul { padding: 0 0 0 2em; }
+/* line 30, ../../assets/scss/_basefiles/_common.scss */
+.body-text .service { position: relative; min-height: 100px; }
+/* line 34, ../../assets/scss/_basefiles/_common.scss */
+.body-text .service .icon { position: absolute; right: -155px; }
 
-/* line 33, ../../assets/scss/_basefiles/_common.scss */
+/* line 41, ../../assets/scss/_basefiles/_common.scss */
 .main { background-image: -webkit-gradient(linear, 50% 0%, 50% 15, color-stop(0%, rgba(0, 0, 0, 0.15)), color-stop(100%, rgba(0, 0, 0, 0))); background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: -moz-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: -o-linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0) 15px); }
-/* line 36, ../../assets/scss/_basefiles/_common.scss */
+/* line 44, ../../assets/scss/_basefiles/_common.scss */
 .main > .wrapper { padding: 155px 0 50px 0; }
 
 /* ELEMENT STYLES */
@@ -274,26 +278,30 @@ a { -webkit-transition: color 200ms linear; -moz-transition: color 200ms linear;
 /* line 1, ../../assets/scss/_elements/_top.scss */
 .top { height: 136px; background: url("/img/top-background.png") center top; }
 /* line 5, ../../assets/scss/_elements/_top.scss */
+.top .wrapper { position: relative; }
+/* line 7, ../../assets/scss/_elements/_top.scss */
 .top .logo { position: absolute; display: block; width: 305px; height: 270px; margin: 0 -60px; overflow: hidden; text-indent: -999em; background: url("/img/sprite.png") 0 0 no-repeat; }
-/* line 18, ../../assets/scss/_elements/_top.scss */
+/* line 20, ../../assets/scss/_elements/_top.scss */
+.top .header-text { position: absolute; left: 220px; top: 180px; }
+/* line 26, ../../assets/scss/_elements/_top.scss */
 .top .main-nav { position: relative; top: 12px; left: 220px; width: 740px; height: 100px; font-family: "Folio Bold Condensed"; text-transform: uppercase; }
-/* line 27, ../../assets/scss/_elements/_top.scss */
-.top .main-nav ul { text-align: justify; }
-/* line 28, ../../assets/scss/_elements/_top.scss */
-.top .main-nav ul:after { content: ""; display: inline-block; clear: both; width: 100%; height: 1px; }
 /* line 35, ../../assets/scss/_elements/_top.scss */
+.top .main-nav ul { text-align: justify; }
+/* line 36, ../../assets/scss/_elements/_top.scss */
+.top .main-nav ul:after { content: ""; display: inline-block; clear: both; width: 100%; height: 1px; }
+/* line 43, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li { display: inline-block; line-height: 100px; position: relative; }
-/* line 40, ../../assets/scss/_elements/_top.scss */
+/* line 48, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li a { font-size: 34px; color: #c5c5c5; text-decoration: none; text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
-/* line 47, ../../assets/scss/_elements/_top.scss */
+/* line 55, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li a:hover, .top .main-nav li a:focus { color: #fff; }
-/* line 53, ../../assets/scss/_elements/_top.scss */
+/* line 61, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li.active:before { content: ""; background: url("/img/sprite.png") -90px -270px no-repeat; width: 20px; height: 20px; position: absolute; left: 50%; top: 8px; margin-left: -10px; }
-/* line 63, ../../assets/scss/_elements/_top.scss */
+/* line 71, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li.active a { color: #fff; }
-/* line 66, ../../assets/scss/_elements/_top.scss */
+/* line 74, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li:after { content: ""; display: block; height: 100px; width: 20px; background: url("/img/sprite.png") 0 -271px no-repeat; position: absolute; right: -55px; top: 0; }
-/* line 78, ../../assets/scss/_elements/_top.scss */
+/* line 86, ../../assets/scss/_elements/_top.scss */
 .top .main-nav li:last-child:after { content: none; display: none; }
 
 /* line 1, ../../assets/scss/_elements/_footer.scss */
