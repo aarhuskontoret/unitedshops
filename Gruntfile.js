@@ -131,5 +131,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-bake');
 
 	grunt.registerTask('default', ['connect','watch']);
-	grunt.registerTask('release', ['uglify']);
+	grunt.registerTask('release', ['uglify','compass:release']);
 };
