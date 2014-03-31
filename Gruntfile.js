@@ -20,23 +20,6 @@ module.exports = function(grunt) {
 				src: ['assets/scripts/**/*.js', '!assets/scripts/**/_plugins/*.js', '!assets/scripts/**/modernizr*.js']
 			}
 		},
-		copy: {
-			dist: {
-				files: [
-					{
-						expand: true,
-						cwd: 'assets/fonts/',
-						src: ['*.*'],
-						dest: 'markup/css/fonts/'
-					},
-					{
-						expand: true,
-						src: ['assets/scripts/**/modernizr*.js'],
-						dest: ['markup/scripts']
-					}
-				]
-			}
-		},
 		compass: {
 			dist: {
 				options: {
@@ -92,15 +75,20 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: 8080,
-					hostname: 'localhost',
-					base: 'markup'
+					hostname: '*',
+					base: 'markup',
+					open: 'http://dwiklund.local:8080',
+					livereload: true
 				}
 			}
 		},
 		watch: {
 			compass: {
 				files: ['assets/scss/**/*.scss'],
-				tasks: ['compass:dist']
+				tasks: ['compass:dist'],
+				options: {
+					livereload: true
+				}
 			},
 			jsHint: {
 				files: ['assets/scripts/**/*.js', '!assets/scripts/**/*.min.js', '!assets/scripts/**/plugins/*.js'],
@@ -116,7 +104,10 @@ module.exports = function(grunt) {
 			},
 			bake: {
 				files: ['assets/html/**/*.htm'],
-				tasks: ['bake']
+				tasks: ['bake'],
+				options: {
+					livereload: true
+				}
 			}
 		}
 	});
@@ -130,6 +121,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-bake');
 
-	grunt.registerTask('default', ['connect','watch']);
+	grunt.registerTask('default', ['concat','connect','watch']);
 	grunt.registerTask('release', ['uglify','compass:release']);
 };
